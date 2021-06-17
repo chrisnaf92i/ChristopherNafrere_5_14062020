@@ -75,7 +75,7 @@ nav ul li:hover a {
 }
 .teddie__image {
   width: 100%;
-  height: 200px;
+  height: 300px;
 }
 .teddie h3 {
   text-align: justify;
@@ -147,9 +147,6 @@ nav ul li:hover a {
   height: 300px;
 }
 
-.teddieSolo {
-  border: 1px solid black;
-}
 .teddieSolo img {
   width: 100%;
 }
@@ -157,13 +154,16 @@ nav ul li:hover a {
   display: flex;
   align-items: center;
   position: relative;
-  width: 85%;
-  margin: auto;
+  width: 100%;
   margin-bottom: 25px;
+}
+.teddieSolo__text div {
+  width: 85%;
+  margin-left: 25px;
 }
 .teddieSolo__text__price {
   position: absolute;
-  right: 5px;
+  right: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

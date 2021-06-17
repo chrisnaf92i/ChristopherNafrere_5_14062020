@@ -1,6 +1,5 @@
 .teddieSolo
 {
-    border:1px solid black;
     
     img
     {
@@ -13,14 +12,19 @@
         align-items: center;
         position:relative;
 
-        width:85%;
-        margin:auto;
+
+        width:100%;
         margin-bottom:25px;
+        div
+        {
+            width:85%;
+            margin-left:25px;
+        }
         
         &__price
         {
             position:absolute;
-            right:5px;
+            right:25px;
         }
     }
 
