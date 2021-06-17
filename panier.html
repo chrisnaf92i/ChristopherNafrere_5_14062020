@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="public/css/style.css">
+        <script src="https://kit.fontawesome.com/e4cfeb22a7.js" crossorigin="anonymous"></script>
+        <title>Orinoco Teddies | panier</title>
+    </head>
+    <body>
+        <header>
+            <h1>Orinoco Teddies</h1>
+
+            <nav>
+                <ul>
+                    <li> <a href="./index.html"> Acceuil </a> </li>
+                    <li> <a href="./panier.html"> Mon panier </a> </li>
+                    <li><a href="./command.html"> Commander </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="pannier" class="pannier">
+
+            <h1>Votre pannier</h1>
+            <template id="articlePanier" class="articlePanier">
+                <article id="pannier__teddies" class="pannier__teddies">
+                    <img src="" alt="image ours en peluche dans le pannier" id="pannier__teddies__image" class="pannier__teddies__image">
+                    <div id="pannier__teddies__text" class="pannier__teddies__text">
+                        <div>
+                            <h2 id="pannier__teddies__text__name" class="pannier__teddies__text__name">[Nom]</h2>
+                            <h3 id="pannier__teddies__text__description" class="pannier__teddies__text__description">[Description]</h3>
+                        </div>
+                        <p id="pannier__teddies__text__price" class="pannier__teddies__text__price">
+                            [prix]
+                        </p>
+                    </div>
+                </article>
+            </template>
+            
+            
+            <a href="./command.html" id="btn--command" class="btn btn--command"><i class="fas fa-shopping-cart">  Commander</i></a>
+        
+        </main>
+
+        <script src="./Javascript/pannierPage.js"></script>
+    </body>
+</html>

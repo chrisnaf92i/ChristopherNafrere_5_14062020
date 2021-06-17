@@ -1,0 +1,77 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="public/css/style.css">
+
+        <title>Orinoco Teddies | Commande</title>
+    </head>
+    <body>
+        <header>
+            <h1>Orinoco Teddies</h1>
+
+            <nav>
+                <ul>
+                    <li> <a href="./index.html"> Acceuil </a> </li>
+                    <li> <a href="./panier.html"> Mon panier </a> </li>
+                    <li><a href="./command.html"> Commander </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="MainCommand" class="MainCommand">
+            <form action="" method="post">
+                <fieldset>
+                    <legend><h2>Commander</h2></legend>
+                    <label for="firstName">Prénom :</label>
+                    <br>
+                    <input type="text" name="firstName" placeholder="ex :Jean" id="textInput textInput--firstName" required>
+
+                    <br>
+                    <br>
+
+                    <label for="lastName">Nom de famille :</label>
+                    <br>
+                    <input type="text" name="lastName" placeholder="ex :Terrier" id="textInput textInput--lastName" required>
+
+                    <br>
+                    <br>
+
+                    <label for="address">Adresse :</label>
+                    <br>
+                    <input type="text" name="address" placeholder="ex : 11 avenu de l'étoile" id="textInput textInput--address" required>
+        
+                    <br>
+                    <br>
+        
+                    <label for="city">Ville :</label>
+                    <br>
+                    <input type="text" name="city" placeholder="ex : Paris" id="textInput textInput--city" required>
+        
+                    <br>
+                    <br>
+                    
+                    <label for="email">Email :</label>
+                    <br>
+                    <input type="email" name="email" placeholder="ex : exemple@mail.xyz" id="textInput textInput--email" required>
+                    
+                    <br>
+                    <br>
+                    <h3>Vos Commande :</h3>
+                    
+                    <article id="PannierResult" class="PannierResult">
+                    </article>
+                    <input type="submit" class="btn" value="Validé la commande">
+
+                </fieldset>
+                
+            </form>
+
+
+        </main>
+
+
+    </body>
+</html>

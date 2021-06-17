@@ -1,0 +1,68 @@
+.pannier
+{
+    margin-top:25px;
+    &__teddies
+    {
+
+        border:1px solid black;
+        display:flex;
+
+        width:55%;
+        margin:auto;
+
+        &__text
+        {
+            position:relative;
+
+            display:flex;
+            align-items: flex-start;
+
+            padding:15px;
+
+            border:1px solid black;
+            width:100%;
+            
+
+            h2
+            {
+                margin:0;
+            }
+
+            h3
+            {
+                margin:0;
+            }
+
+            &__price
+            {
+                position:absolute;
+                right:15px;
+            }
+        }
+    }
+}
+
+.btn
+{
+    display:block;
+    border-radius:45px;
+
+    background-color: pink;
+    
+    color:white;
+
+    width:max-content;
+
+    margin:auto;
+    margin-top:25px;
+    padding:15px;
+
+    border:none;
+
+    text-decoration: none;
+
+    &:hover
+    {
+        background-color: #B6C1FF;
+    }
+}

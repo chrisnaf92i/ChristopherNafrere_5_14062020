@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="public/css/style.css">
+
+        <title>Orinoco Teddies</title>
+    </head>
+    <body>
+        <header>
+            <h1>Orinoco Teddies</h1>
+
+            <nav>
+                <ul>
+                    <li> <a href="./index.html"> Acceuil </a> </li>
+                    <li> <a href="./panier.html"> Mon panier </a> </li>
+                    <li> <a href="./command.html"> Commander </a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainAllTeddies" class="mainAllTeddies">
+            <template id="TemplateTeddie" class="templateTeddie">
+                <article id="teddie" class="teddie">
+                    <img src="" alt="Photo de l'ours" id="teddie__image" class="teddie__image">
+                    
+                    <div id="teddie__text" class="teddie__text">
+                        <div>
+                            <h2 id="teddie__text__title" class="teddie__text__title">
+                                [nom du produit]
+                            </h2>
+                            <h3 id="teddie__text__description" class="teddie__text__description">
+                                [description]
+                            </h3>
+                        </div>
+                        <p id="teddie__text__price" class="teddie__text__price">€</p>
+                    </div>
+                </article>
+            </template>
+        </main>
+
+        <script src="./Javascript/pannier.js"></script>
+        <script src="./Javascript/Teddies.js"></script>
+    </body>
+</html>

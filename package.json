@@ -1,0 +1,12 @@
+{
+  "name": "orinoco-teddies",
+  "version": "1.0.0",
+  "description": "Orinoco Teddies est un site de vente d'ourse en peluche.",
+  "main": "index.js",
+  "scripts": {
+    "sass":"Sass --watch sass/main.scss:public/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

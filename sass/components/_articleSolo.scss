@@ -1,0 +1,27 @@
+.teddieSolo
+{
+    border:1px solid black;
+    
+    img
+    {
+        width:100%;
+    }
+
+    &__text
+    {
+        display:flex;
+        align-items: center;
+        position:relative;
+
+        width:85%;
+        margin:auto;
+        margin-bottom:25px;
+        
+        &__price
+        {
+            position:absolute;
+            right:5px;
+        }
+    }
+
+}

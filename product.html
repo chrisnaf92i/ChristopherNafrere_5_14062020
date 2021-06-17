@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="public/css/style.css">
+
+        <title>Orinoco Teddies | produit</title>
+    </head>
+    <body>
+        <header>
+            <h1>Orinoco Teddies</h1>
+
+            <nav>
+                <ul>
+                    <li> <a href="./index.html"> Acceuil </a> </li>
+                    <li> <a href="./panier.html"> Mon panier </a> </li>
+                    <li><a href="./command.html"> Commander </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="MainProduct" class="MainProduct">
+            <article class="teddieSolo">
+                <img src="" alt="image de l'ours en peluche" id="teddie__image" class="teddie_image">
+                <div id="teddieSolo__text" class="teddieSolo__text">
+                    <div>
+                        <h1 id="teddieSolo__text__nom" class="teddieSolo__text__nom">[nom]</h1>
+                        <h2 id="teddie__text__description" class="teddie__text__description">[description]</h2>
+                    </div>
+                    <p id="teddieSolo__text__price" class="teddieSolo__text__price">[prix]</p>
+
+                </div>
+
+                <select name="color" id="color" style="margin-left:65px">
+                    <option value="default">default</option>
+                </select>
+
+               <!--  <a href="./panier.html" id="btnAddPannier" class="btn">Ajouter au panier</i></a> -->
+                <button id="btnAddPannier" class="btn">Ajouter au panier</button>
+            </article>
+        </main>
+
+        <script src="./Javascript/singleProductPage.js"></script>
+
+    </body>
+</html>
