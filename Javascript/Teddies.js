@@ -5,8 +5,8 @@
 
         for (const teddie of teddies) {
             displayTeddies(teddie)
-            openDetailPage(teddie)
         }
+        openDetailPage(teddies)
 
 
     }
@@ -50,14 +50,12 @@ function openDetailPage(_teddie)
 {
     let peluche = document.getElementsByClassName("teddie")
 
-
-    
-    for (const teddie of peluche) {
-        teddie.addEventListener("click", function()
+    for (let i = 0; i < peluche.length; i++) {
+        peluche[i].addEventListener("click", function()
         {
-            window.open("../product.html?id=" + _teddie._id, "__blank")
+            window.open("../product.html?id=" + _teddie[i]._id, "__blank")
         })
-    } 
+    }
     
 
 }

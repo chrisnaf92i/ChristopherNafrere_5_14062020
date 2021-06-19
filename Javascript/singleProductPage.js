@@ -29,7 +29,6 @@ function getTeddieInformation(id)
 function displayTeddieInformation(_teddie)
 {
 
-    console.log(_teddie)
     let image = document.getElementById("teddieSolo__image")
     let name = document.getElementById("teddieSolo__text__nom")
     let description = document.getElementById("teddieSolo__text__description")
@@ -40,22 +39,27 @@ function displayTeddieInformation(_teddie)
     name.textContent = _teddie.name;
     description.textContent = _teddie.description;
     price.textContent = _teddie.price + " €";
+    
 
-
-    console.log(colorSelect)
-
+    _teddie.colors.forEach(function(_color, key)
+    {
+        console.log(key + " = " + _color)
+        var opt = document.createElement("option")
+        var opt = document.createElement("option")
+        opt.innerHTML = _color
+        colorSelect.appendChild(opt)
+    });
 }
 
 function addToPannier(_teddie)
 {
     let btnAdd = document.getElementById("btnAddPannier");
+    console.log(_teddie)
     let pannierTest = []
     btnAdd.addEventListener("click", function()
     {
         pannierTest.push(_teddie)
-
-        console.log("ajout d'un nouvel ours")
-
         localStorage.setItem("pannier", pannierTest)
+        alert("ajout au pannier")
     })
 }
