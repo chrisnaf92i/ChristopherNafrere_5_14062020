@@ -12,6 +12,9 @@
 {
     width:40%;
     margin:auto;
+    @media (max-width:425px) {
+        width:80%;
+    }
 }
 
 .MainProduct

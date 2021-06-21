@@ -3,5 +3,8 @@ body
     margin:auto;
 
     width:90%;
+    @media (max-width:425px) {
+        width:100%
+    }
 }
 

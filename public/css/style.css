@@ -2,6 +2,11 @@ body {
   margin: auto;
   width: 90%;
 }
+@media (max-width: 425px) {
+  body {
+    width: 100%;
+  }
+}
 
 #mainAllTeddies {
   width: 90%;
@@ -15,6 +20,11 @@ body {
 .mainCommand {
   width: 40%;
   margin: auto;
+}
+@media (max-width: 425px) {
+  .mainCommand {
+    width: 80%;
+  }
 }
 
 .MainProduct {
@@ -68,7 +78,7 @@ nav ul li:hover a {
 .teddie {
   cursor: pointer;
   overflow: hidden;
-  width: 100%;
+  width: 30%;
   margin-bottom: 15px;
   box-shadow: 1px 1px 5px black;
   border-radius: 15px;
@@ -80,6 +90,11 @@ nav ul li:hover a {
 @media (max-width: 425px) {
   .teddie__image {
     height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .teddie__image {
+    height: 150px;
   }
 }
 .teddie h3 {
@@ -108,7 +123,7 @@ nav ul li:hover a {
 .pannier__teddies {
   border: 1px solid black;
   display: flex;
-  width: 55%;
+  width: 80%;
   margin: auto;
 }
 .pannier__teddies__text {
@@ -119,15 +134,47 @@ nav ul li:hover a {
   border: 1px solid black;
   width: 100%;
 }
+@media (max-width: 425px) {
+  .pannier__teddies__text {
+    flex-direction: column;
+  }
+}
+.pannier__teddies__text div {
+  width: 80%;
+}
+@media (max-width: 425px) {
+  .pannier__teddies__text div {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+  }
+}
 .pannier__teddies__text h2 {
   margin: 0;
+  margin-bottom: 25px;
+}
+@media (max-width: 425px) {
+  .pannier__teddies__text h2 {
+    font-size: 16px;
+  }
 }
 .pannier__teddies__text h3 {
   margin: 0;
 }
+@media (max-width: 425px) {
+  .pannier__teddies__text h3 {
+    font-size: 13px;
+  }
+}
 .pannier__teddies__text__price {
   position: absolute;
   right: 15px;
+}
+@media (max-width: 425px) {
+  .pannier__teddies__text__price {
+    position: relative;
+    margin: 15px;
+  }
 }
 
 .btn {
@@ -142,6 +189,8 @@ nav ul li:hover a {
   padding: 15px;
   border: none;
   text-decoration: none;
+  margin-bottom: 25px;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: #6576d4;
@@ -153,6 +202,10 @@ nav ul li:hover a {
   height: 300px;
 }
 
+.teddieSolo {
+  overflow: hidden;
+  border-radius: 25px;
+}
 .teddieSolo img {
   width: 100%;
 }
