@@ -11,6 +11,9 @@ function main()
 
     // affichage de la liste du pannier
     displayPannier(PannierResult)
+    for (const article of PannierResult) {
+        displayPannier(article)
+    }
 }
 
 function displayPannier(_teddie)
@@ -20,6 +23,7 @@ function displayPannier(_teddie)
     let cloneElt = document.importNode(template.content, true)
 
     // intégration des valeurs
+    cloneElt.getElementById("pannier__teddies__image").setAttribute("src", _teddie.imageUrl)
     cloneElt.getElementById("pannier__teddies__text__name").textContent = _teddie.name
     cloneElt.getElementById("pannier__teddies__text__description").textContent = _teddie.description
     cloneElt.getElementById("pannier__teddies__text__price").textContent = _teddie.price + " €"

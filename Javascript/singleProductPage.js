@@ -71,14 +71,15 @@ function addToPannier(_teddie)
     btnAdd.addEventListener("click", function()
     {
         // ajout de l'article au format json dans le pannier de la page
-        pannierTest.push(JSON.stringify(_teddie))
+        pannierTest.push(_teddie)
 
         // affichage du pannier de la page
         console.log(pannierTest)
 
         // création d'une variable du site pour le panier générale avec la valeur du panier de la page
-        localStorage.setItem("pannier", pannierTest)
+        localStorage.setItem("pannier", JSON.stringify(pannierTest))
 
+        alert("ajout au pannier")
 
         // teste de récupération du pannier
         let tabPannier = localStorage.pannier
