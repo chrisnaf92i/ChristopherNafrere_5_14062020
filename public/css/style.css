@@ -201,21 +201,22 @@ nav ul li:hover a {
 
 .PannierResult {
   border: 1px solid black;
-  width: 90%;
+  width: 95%;
   height: 300px;
+  overflow: scroll;
 }
 .PannierResult__teddies {
   position: relative;
   display: flex;
   border-bottom: 1px solid black;
-  padding: 0 25px;
+  padding: 0 15px;
 }
 .PannierResult__teddies__text {
-  width: 80%;
+  width: 75%;
 }
 .PannierResult__teddies__price {
   position: absolute;
-  right: 25px;
+  right: 15px;
 }
 
 .teddieSolo {
