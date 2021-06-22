@@ -62,7 +62,19 @@
                     <h3>Vos Commande :</h3>
                     
                     <article id="PannierResult" class="PannierResult">
+                        <template id="articlePannierCommand" class="articlePannierCommand">
+                            <div id="PannierResult__teddies" class="PannierResult__teddies">
+                                <div id="PannierResult__teddies__left" class="PannierResult__teddies__left">
+                                    <p id="PannierResult__teddies__left__nom" class="PannierResult__teddies__left__nom">[nom de l'article]</p>
+                                    <p id="PannierResult__teddies__left__description" class="PannierResult__teddies__left__description">[description de l'article]</p>    
+                                </div>
+                                <p id="PannierResult__teddies__price" class="PannierResult__teddies__price">[prix] €</p>
+                            </div>
+                        </template>
                     </article>
+
+                    <p id="totalPrice" class="totalPrice">Prix total : [... €]</p>
+
                     <input type="submit" class="btn" value="Validé la commande">
 
                 </fieldset>

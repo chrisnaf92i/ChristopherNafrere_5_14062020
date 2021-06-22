@@ -126,6 +126,9 @@ nav ul li:hover a {
   width: 80%;
   margin: auto;
 }
+.pannier__teddies__image {
+  width: 200px;
+}
 .pannier__teddies__text {
   position: relative;
   display: flex;
@@ -200,6 +203,19 @@ nav ul li:hover a {
   border: 1px solid black;
   width: 90%;
   height: 300px;
+}
+.PannierResult__teddies {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid black;
+  padding: 0 25px;
+}
+.PannierResult__teddies__text {
+  width: 80%;
+}
+.PannierResult__teddies__price {
+  position: absolute;
+  right: 25px;
 }
 
 .teddieSolo {

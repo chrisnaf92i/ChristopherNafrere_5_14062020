@@ -3,4 +3,24 @@
     border:1px solid black;
     width:90%;
     height:300px;
+
+    &__teddies
+    {
+        position:relative;
+        display:flex;
+        border-bottom:1px solid black;
+        padding: 0 25px;
+
+        &__text
+        {
+            width:80%;
+        }
+
+        &__price
+        {
+            position:absolute;
+            right:25px;
+        }
+    }
 }
+
