@@ -66,6 +66,4 @@ function openDetailPage(_teddie)
             window.open("../product.html?id=" + _teddie[i]._id, "__blank")
         })
     }
-    
-
 }
