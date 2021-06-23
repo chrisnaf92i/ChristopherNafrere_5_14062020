@@ -65,25 +65,32 @@ function addToPannier(_teddie)
     // récupération du bouton d'ajout
     let btnAdd = document.getElementById("btnAddPannier");
     // création d'un faut pannier de la page
-    let pannierTest = []
+    let pannierTemporaire = []
     
     // récupération l'appui sur le bouton
     btnAdd.addEventListener("click", function()
     {
-        // ajout de l'article au format json dans le pannier de la page
-        pannierTest.push(_teddie)
+        /* // ajout de l'article au format json dans le pannier de la page
+        pannierTemporaire.push(_teddie)
 
         // affichage du pannier de la page
-        console.log(pannierTest)
+        console.log(pannierTemporaire)
 
         // création d'une variable du site pour le panier générale avec la valeur du panier de la page
-        localStorage.setItem("pannier", JSON.stringify(pannierTest))
+        localStorage.setItem("pannier", JSON.stringify(pannierTemporaire))
 
         alert("ajout au pannier")
 
         // teste de récupération du pannier
         let tabPannier = localStorage.pannier
 
-        console.log(tabPannier)
+        console.log(tabPannier) */
+
+        pannierTemporaire = JSON.parse(localStorage.getItem("pannier"))
+        pannierTemporaire.push(_teddie)
+
+        console.log(pannierTemporaire)
+
+        localStorage.pannier = JSON.stringify(pannierTemporaire)
     })
 }

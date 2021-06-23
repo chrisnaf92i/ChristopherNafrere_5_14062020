@@ -5,6 +5,14 @@ function main()
     let pannier = JSON.parse(localStorage.pannier)
     let displayTotalPrice = document.getElementById("totalPrice")
     let totalPrice = 0;
+    
+    let btnSubmit = document.getElementById("btn-submit")
+    btnSubmit.addEventListener("click", function(event)
+    {
+        event.stopPropagation()
+        console.log(" Envoi du formulaire")
+    })
+
     for (const teddie of pannier) {
         displayPannier(teddie)
         totalPrice += teddie.price;
@@ -14,11 +22,13 @@ function main()
         displayTotalPrice.textContent = "prix : " + totalPrice + " €"
 
     }
-    else
-    {
-        displayTotalPrice.textContent = "prix : 0 €"
 
-    }
+    recupFormular()
+}
+
+function recupFormular()
+{
+    let formular = {}
 }
 
 function displayPannier(_teddie)
@@ -29,7 +39,7 @@ function displayPannier(_teddie)
 
     cloneElt.getElementById("PannierResult__teddies__left__nom").textContent = _teddie.name
     cloneElt.getElementById("PannierResult__teddies__left__description").textContent = _teddie.description
-    cloneElt.getElementById("PannierResult__teddies__price").textContent = _teddie.price + "€"
+    cloneElt.getElementById("PannierResult__teddies__price").textContent = _teddie.price + " €"
 
 
     document.getElementById("PannierResult").appendChild(cloneElt)
