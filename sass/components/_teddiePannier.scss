@@ -5,7 +5,11 @@
     {
 
         border:1px solid black;
+        border-top:0.5px solid black;
+        border-bottom:0.5px solid black;
         display:flex;
+
+        cursor:pointer;
 
         width:80%;
         margin:auto;
@@ -23,7 +27,6 @@
 
             padding:15px;
 
-            border:1px solid black;
             width:100%;
             
             
