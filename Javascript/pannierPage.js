@@ -10,10 +10,14 @@ function main()
     console.log(PannierResult)
 
     // affichage de la liste du pannier
-    displayPannier(PannierResult)
+
+    let articles = PannierResult
+
     for (const article of PannierResult) {
         displayPannier(article)
     }
+
+    deleteArticle(articles)
 }
 
 function displayPannier(_teddie)
@@ -30,4 +34,26 @@ function displayPannier(_teddie)
 
     // ajout a l'interface de l'élément du pannier
     document.getElementById("pannier").appendChild(cloneElt)
+}
+
+function deleteArticle(_teddie)
+{
+    let  btnDelete = document.getElementsByClassName("pannier__teddies__btnDel")
+
+
+    for (let i = 0; i < _teddie.length; i++) {
+        btnDelete[i].addEventListener("click", function()
+        {
+            _teddie.splice(i, 1)
+
+
+            localStorage.pannier = JSON.stringify(_teddie)
+
+            console.log(localStorage.pannier)
+
+            location.reload()
+
+        })
+        
+    }
 }
