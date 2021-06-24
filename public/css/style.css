@@ -121,16 +121,22 @@ nav ul li:hover a {
   margin-top: 25px;
 }
 .pannier__teddies {
+  position: relative;
   border: 1px solid black;
   border-top: 0.5px solid black;
   border-bottom: 0.5px solid black;
   display: flex;
-  cursor: pointer;
   width: 80%;
   margin: auto;
 }
 .pannier__teddies__image {
   width: 200px;
+}
+.pannier__teddies__btnDel {
+  position: absolute;
+  cursor: pointer;
+  top: 55px;
+  right: 25px;
 }
 .pannier__teddies__text {
   position: relative;
@@ -145,7 +151,7 @@ nav ul li:hover a {
   }
 }
 .pannier__teddies__text div {
-  width: 80%;
+  width: 100%;
 }
 @media (max-width: 425px) {
   .pannier__teddies__text div {
@@ -173,7 +179,7 @@ nav ul li:hover a {
 }
 .pannier__teddies__text__price {
   position: absolute;
-  right: 15px;
+  right: 25px;
 }
 @media (max-width: 425px) {
   .pannier__teddies__text__price {
