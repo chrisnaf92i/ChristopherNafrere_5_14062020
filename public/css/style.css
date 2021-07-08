@@ -207,6 +207,25 @@ nav ul li:hover a {
   background-color: #6576d4;
 }
 
+input {
+  border: 1px solid black;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 90%;
+  padding: 5px;
+}
+input:focus {
+  background-color: #e1ece1;
+}
+input:not(focus):invalid {
+  background-color: red;
+  color: white;
+}
+input:not(focus):valid {
+  background-color: #56ff56;
+  color: white;
+}
+
 .PannierResult {
   border: 1px solid black;
   width: 95%;
@@ -248,6 +267,136 @@ nav ul li:hover a {
 .teddieSolo__text__price {
   position: absolute;
   right: 25px;
+}
+
+@keyframes bars-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.container-loading {
+  z-index: 1;
+  position: absolute;
+  /* display:flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffc6d0;
+  width: 300px;
+  height: 300px;
+  margin: 25px;
+  border: 1px solid black;
+  border-radius: 35px;
+}
+.container-loading__spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.container-loading__spinner__bar {
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  margin: 10px;
+  background-color: white;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+}
+.container-loading__spinner__bar--0 {
+  transform: rotate(0deg) scaleX(1);
+  animation-delay: 0ms;
+}
+.container-loading__spinner__bar--1 {
+  transform: rotate(45deg) scaleX(1);
+  animation-delay: 200ms;
+}
+.container-loading__spinner__bar--2 {
+  transform: rotate(90deg) scaleX(1);
+  animation-delay: 400ms;
+}
+.container-loading__spinner__bar--3 {
+  transform: rotate(135deg) scaleX(1);
+  animation-delay: 600ms;
+}
+.container-loading__spinner__bar--4 {
+  transform: rotate(180deg) scaleX(1);
+  animation-delay: 800ms;
+}
+.container-loading__spinner__bar--5 {
+  transform: rotate(225deg) scaleX(1);
+  animation-delay: 1000ms;
+}
+.container-loading__spinner__bar--6 {
+  transform: rotate(270deg) scaleX(1);
+  animation-delay: 1200ms;
+}
+.container-loading__spinner__bar--7 {
+  transform: rotate(315deg) scaleX(1);
+  animation-delay: 1400ms;
+}
+.container-loading img {
+  width: 100%;
+}
+.container-loading h2 {
+  margin-top: 95px;
+  text-align: center;
+  width: 90%;
 }
 
 /*# sourceMappingURL=style.css.map */

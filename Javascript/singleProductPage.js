@@ -5,14 +5,14 @@
     let parameter = new URLSearchParams(window.location.search);
 
     // récupération de l'id dans l'url
-    let teddie = await getTeddieInformation(parameter.get("id"))
+    let teddy = await getTeddieInformation(parameter.get("id"))
 
     // appel de la fonction d'affichage de l'article a partir de l'id
-    displayTeddieInformation(teddie)
+    displayTeddyInformation(teddy)
 
     // appel de la fonction d'ajout de l'article au pannier
-    addToPannier(teddie)
-    
+    addToPannier(teddy)
+    setLoadingSpinner(teddy)
 })()
 
 function getTeddieInformation(id)
@@ -33,7 +33,7 @@ function getTeddieInformation(id)
         })
 }
 
-function displayTeddieInformation(_teddie)
+function displayTeddyInformation(_teddy)
 {
     // récupération des élément qui compose la page
     let image = document.getElementById("teddieSolo__image")
@@ -43,13 +43,13 @@ function displayTeddieInformation(_teddie)
     let colorSelect = document.getElementById("select-color")
 
     // modification des élément composant la page a partir des information de l'api
-    image.setAttribute("src", _teddie.imageUrl)
-    name.textContent = _teddie.name;
-    description.textContent = _teddie.description;
-    price.textContent = _teddie.price + " €";
+    image.setAttribute("src", _teddy.imageUrl)
+    name.textContent = _teddy.name;
+    description.textContent = _teddy.description;
+    price.textContent = (_teddy.price/100) + " €";
     
     // ajout du selecteur de couleur
-    _teddie.colors.forEach(function(_color, key)
+    _teddy.colors.forEach(function(_color, key)
     {
         console.log(key + " = " + _color)
         var opt = document.createElement("option")
@@ -60,7 +60,7 @@ function displayTeddieInformation(_teddie)
 }
 
 // fonction d'ajout au pannier
-function addToPannier(_teddie)
+function addToPannier(_teddy)
 {
     // récupération du bouton d'ajout
     let btnAdd = document.getElementById("btnAddPannier");
@@ -87,10 +87,19 @@ function addToPannier(_teddie)
         console.log(tabPannier) */
 
         pannierTemporaire = JSON.parse(localStorage.getItem("pannier"))
-        pannierTemporaire.push(_teddie)
+        pannierTemporaire.push(_teddy)
 
         console.log(pannierTemporaire)
 
         localStorage.pannier = JSON.stringify(pannierTemporaire)
+        alert("Ajout de " + _teddy.name + " au pannier")
     })
+}
+
+function setLoadingSpinner(_teddy)
+{
+    let teddyName = document.getElementById("container-loading__name")
+
+    teddyName.textContent = _teddy.name
+    
 }

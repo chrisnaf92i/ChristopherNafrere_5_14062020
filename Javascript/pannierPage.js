@@ -30,7 +30,7 @@ function displayPannier(_teddie)
     cloneElt.getElementById("pannier__teddies__image").setAttribute("src", _teddie.imageUrl)
     cloneElt.getElementById("pannier__teddies__text__name").textContent = _teddie.name
     cloneElt.getElementById("pannier__teddies__text__description").textContent = _teddie.description
-    cloneElt.getElementById("pannier__teddies__text__price").textContent = _teddie.price + " €"
+    cloneElt.getElementById("pannier__teddies__text__price").textContent = (_teddie.price/100) + " €"
 
     // ajout a l'interface de l'élément du pannier
     document.getElementById("pannier").appendChild(cloneElt)
@@ -46,12 +46,13 @@ function deleteArticle(_teddie)
         {
             _teddie.splice(i, 1)
 
-
             localStorage.pannier = JSON.stringify(_teddie)
+
 
             console.log(localStorage.pannier)
 
             location.reload()
+
 
         })
         

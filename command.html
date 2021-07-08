@@ -14,7 +14,7 @@
 
             <nav>
                 <ul>
-                    <li> <a href="./index.html"> Acceuil </a> </li>
+                    <li> <a href="./index.html"> Accueil </a> </li>
                     <li> <a href="./panier.html"> Mon panier </a> </li>
                     <li><a href="./command.html"> Commander </a></li>
                 </ul>
@@ -22,45 +22,80 @@
         </header>
 
         <main id="MainCommand" class="MainCommand">
-            <form action="" method="post">
+
+            <!-- création du formulaire récupérable par js -->
+            <!-- <fieldset>
+                <legend><h2>Commander</h2></legend>
+                <label for="firstName">Prénom :</label>
+                <br>
+                <input type="text" name="firstName" placeholder="ex :Jean" id="firstName" required>
+
+                <br>
+                <br>
+
+                <label for="lastName">Nom de famille :</label>
+                <br>
+                <input type="text" name="lastName" placeholder="ex :Terrier" id="lastName" required>
+
+                <br>
+                <br>
+
+                <label for="address">Adresse :</label>
+                <br>
+                <input type="text" name="address" placeholder="ex : 11 avenu de l'étoile" id="address" required>
+
+                <br>
+                <br>
+
+                <label for="city">Ville :</label>
+                <br>
+                <input type="text" name="city" placeholder="ex : Paris" id="city" required>
+
+                <br>
+                <br>
+                
+                <label for="email">Email :</label>
+                <br>
+                <input type ="email" name="email" placeholder="ex : exemple@mail.xyz" id="email" required>
+            </fieldset> -->
+
+            <!-- création du formulaire récupérable par js -->
+            <form  method="post" name="contact">
                 <fieldset>
-                    <legend><h2>Commander</h2></legend>
+                <legend><h2>Commander</h2></legend>
                     <label for="firstName">Prénom :</label>
                     <br>
-                    <input type="text" name="firstName" placeholder="ex :Jean" id="textInput textInput--firstName" required>
+                    <input type="text" name="firstName" placeholder="ex :Jean" id="firstName" required>
 
                     <br>
                     <br>
 
                     <label for="lastName">Nom de famille :</label>
                     <br>
-                    <input type="text" name="lastName" placeholder="ex :Terrier" id="textInput textInput--lastName" required>
+                    <input type="text" name="lastName" placeholder="ex :Terrier" id="lastName" required>
 
                     <br>
                     <br>
 
                     <label for="address">Adresse :</label>
                     <br>
-                    <input type="text" name="address" placeholder="ex : 11 avenu de l'étoile" id="textInput textInput--address" required>
+                    <input type="text" name="address" placeholder="ex : 11 avenu de l'étoile" id="address" required>
         
                     <br>
                     <br>
         
                     <label for="city">Ville :</label>
                     <br>
-                    <input type="text" name="city" placeholder="ex : Paris" id="textInput textInput--city" required>
-        
+                    <input type="text" name="city" placeholder="ex : Paris" id="city" required>    
                     <br>
                     <br>
                     
                     <label for="email">Email :</label>
                     <br>
-                    <input type="email" name="email" placeholder="ex : exemple@mail.xyz" id="textInput textInput--email" required>
+                    <input type="email" name="email" placeholder="ex : exemple@mail.xyz" id="email" required>
                     
                     <br>
                     <br>
-                    <h3>Vos Commande :</h3>
-                    
                     <article id="PannierResult" class="PannierResult">
                         <template id="articlePannierCommand" class="articlePannierCommand">
                             <div id="PannierResult__teddies" class="PannierResult__teddies">
@@ -72,10 +107,11 @@
                             </div>
                         </template>
                     </article>
-
+                    
+                    
                     <p id="totalPrice" class="totalPrice">Prix total : 0 €</p>
-
-                    <input type="submit" id="btn-submit" class="btn" value="Validé la commande">
+                    
+                    <input type="button" id="btn-submit" class="btn" value="Validé la commande">
 
                 </fieldset>
                 

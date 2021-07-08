@@ -35,18 +35,18 @@ function getTeddies()
         })
 }
 
-function displayTeddies(teddie)
+function displayTeddies(_teddie)
 {
     // clone de l'élément type d'article
     const template = document.getElementById("TemplateTeddie")
     const cloneElt = document.importNode(template.content, true)
 
     // affichage des valeurs des article a partir de l'api
-    cloneElt.getElementById("teddie__image").setAttribute("src", teddie.imageUrl)
+    cloneElt.getElementById("teddie__image").setAttribute("src", _teddie.imageUrl)
 
-    cloneElt.getElementById("teddie__text__title").textContent = teddie.name
-    cloneElt.getElementById("teddie__text__description").textContent = teddie.description
-    cloneElt.getElementById("teddie__text__price").textContent = teddie.price + "€"
+    cloneElt.getElementById("teddie__text__title").textContent = _teddie.name
+    cloneElt.getElementById("teddie__text__description").textContent = _teddie.description
+    cloneElt.getElementById("teddie__text__price").textContent = (_teddie.price/100) + " €"
 
     // ajout de l'article l'interface
     document.getElementById("mainAllTeddies").appendChild(cloneElt)
