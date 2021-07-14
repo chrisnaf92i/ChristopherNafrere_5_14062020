@@ -7,6 +7,7 @@ function main()
     let buttonSubmit = document.getElementById("btn-submit")
     let totalPrice = 0;
     let orderID = [];
+    let orderResult;
 
     for (const teddie of pannier) {
         displayPannier(teddie)
@@ -30,7 +31,6 @@ function main()
     buttonSubmit.addEventListener("click", () => 
     {
         sendOrderData(contact, orderID)
-        
     })
     
 }
@@ -56,19 +56,21 @@ function displayOrderInfo(ordersID, contactInfo)
 /* récupération et application des information du site du formulaire  */
 function getInfo()
 {
-    let _firstName = document.getElementById("firstName");
-    let _lastName = document.getElementById("lastName");
+    let contact = {
+        firstName:"",
+        lastName:"",
+        city:"",
+        address:"",
+        email:""
+    };
+
+    let _firstName = document.getElementById("first-name");
+    let _lastName = document.getElementById("last-name");
     let _city = document.getElementById("city");
     let _address = document.getElementById("address");
     let _email = document.getElementById("email");
     
-    let contact = {
-        firstName,
-        lastName,
-        address,
-        city,
-        email
-    }
+
 
     _firstName.addEventListener("input", function(e)
     {
@@ -106,11 +108,23 @@ function getInfo()
 function sendOrderData(orderDataContact, orderDataPannier)
 {
     console.log("envoi de la commande\n\t- " + JSON.stringify(orderDataContact))
-    console.log(orderDataContact)
     let data = {contact:orderDataContact, products:orderDataPannier}
-    console.log(data)
     
-    const response = fetch("http://localhost:3000/api/teddies/order", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(data) })
-    console.log(response)
-    return response
+    const promise = fetch("http://localhost:3000/api/teddies/order", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(data) }) 
+
+    promise.then(async (response) => 
+    {
+        try
+        {
+            console.log(response)
+            const content = await response.json()
+            localStorage.resultOrder = JSON.stringify(content)
+        }catch(err)
+        {
+            alert(err)
+        }
+    })
+
+    window.open("../OrderResultPage.html")
+    
 }

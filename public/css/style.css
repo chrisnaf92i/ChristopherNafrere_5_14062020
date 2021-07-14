@@ -399,4 +399,38 @@ input:not(focus):valid {
   width: 90%;
 }
 
+.main-orderResult {
+  width: 80%;
+  padding: 25px;
+  margin: auto;
+  margin-top: 25px;
+  border: 2px dashed pink;
+  border-radius: 15px;
+}
+
+article {
+  width: 60%;
+}
+
+section {
+  display: flex;
+}
+@media (max-width: 375px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+#first-name {
+  text-transform: capitalize;
+}
+
+#last-name {
+  text-transform: capitalize;
+}
+
+#city {
+  text-transform: capitalize;
+}
+
 /*# sourceMappingURL=style.css.map */

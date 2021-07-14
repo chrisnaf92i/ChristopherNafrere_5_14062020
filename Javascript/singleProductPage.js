@@ -70,22 +70,6 @@ function addToPannier(_teddy)
     // récupération l'appui sur le bouton
     btnAdd.addEventListener("click", function()
     {
-        /* // ajout de l'article au format json dans le pannier de la page
-        pannierTemporaire.push(_teddie)
-
-        // affichage du pannier de la page
-        console.log(pannierTemporaire)
-
-        // création d'une variable du site pour le panier générale avec la valeur du panier de la page
-        localStorage.setItem("pannier", JSON.stringify(pannierTemporaire))
-
-        alert("ajout au pannier")
-
-        // teste de récupération du pannier
-        let tabPannier = localStorage.pannier
-
-        console.log(tabPannier) */
-
         pannierTemporaire = JSON.parse(localStorage.getItem("pannier"))
         pannierTemporaire.push(_teddy)
 
@@ -94,12 +78,4 @@ function addToPannier(_teddy)
         localStorage.pannier = JSON.stringify(pannierTemporaire)
         alert("Ajout de " + _teddy.name + " au pannier")
     })
-}
-
-function setLoadingSpinner(_teddy)
-{
-    let teddyName = document.getElementById("container-loading__name")
-
-    teddyName.textContent = _teddy.name
-    
 }

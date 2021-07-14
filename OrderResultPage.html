@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="public/css/style.css">
+
+        <title>Orinoco Teddies</title>
+    </head>
+    <body>
+        <header>
+            <h1>Orinoco Teddies</h1>
+
+            <nav>
+                <ul>
+                    <li> <a href="./index.html"> Accueil </a> </li>
+                    <li> <a href="./panier.html"> Mon panier </a> </li>
+                    <li> <a href="./command.html"> Commander </a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-orderResult">
+            <h1> Merci votre commande.</h1>
+            <p>
+                <span id="first-name">{prenom}</span> <span id="last-name">{nom}</span>, votre colis sera livré au <span id="address">{adresse}</span> à <span id="city">{city}</span>.
+            </p>
+            <section>
+                <article>        
+                    <h2>Récapitulatif :</h2>
+            
+                    <ul id="list-teddies">
+                    </ul>
+            
+                    <h3>Prix total : <span id="price">{price}</span> €</h3>
+            
+                </article>
+    
+                <aside>
+                    <h2>Code de commande :</h2>
+                    <p id="id">{id}</p>
+                </aside>
+            </section>
+            
+        </main>
+
+        <script src="./Javascript/orderResult.js"></script>
+    </body>
+</html>

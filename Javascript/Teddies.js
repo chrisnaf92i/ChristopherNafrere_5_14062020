@@ -11,8 +11,6 @@
 
         // appel de la fonction d'ouverture de l'api 
         openDetailPage(teddies)
-
-
     }
 )()
 
