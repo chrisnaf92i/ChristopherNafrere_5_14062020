@@ -9,13 +9,14 @@ function main()
     let orderID = [];
     let orderResult;
 
+    // calucle du prix
     for (const teddie of pannier) {
         displayPannier(teddie)
         totalPrice += teddie.price;
         orderID.push(teddie._id);
     }
-
     console.log(orderID)
+    // affichage du prix
     if(totalPrice != 0)
     {
         displayTotalPrice.textContent = "Prix : " + (totalPrice/100) + " €"
@@ -26,8 +27,10 @@ function main()
 
     console.log(contact)
 
+    // affichage de l'objet contact et du pannier
     displayOrderInfo(orderID, contact)
 
+    // envoi de la requete de commande
     buttonSubmit.addEventListener("click", () => 
     {
         sendOrderData(contact, orderID)
@@ -56,6 +59,7 @@ function displayOrderInfo(ordersID, contactInfo)
 /* récupération et application des information du site du formulaire  */
 function getInfo()
 {
+    // initialisation de l'objet contact
     let contact = {
         firstName:"",
         lastName:"",
@@ -64,6 +68,7 @@ function getInfo()
         email:""
     };
 
+    // récupération du formulaire de contact
     let _firstName = document.getElementById("first-name");
     let _lastName = document.getElementById("last-name");
     let _city = document.getElementById("city");
@@ -71,7 +76,7 @@ function getInfo()
     let _email = document.getElementById("email");
     
 
-
+    // récupérationd des inputs du formulaire de contact
     _firstName.addEventListener("input", function(e)
     {
         contact.firstName = _firstName.value
@@ -107,12 +112,14 @@ function getInfo()
 
 function checkContact(orderDataContact)
 {
+    // vérification de la validité de l'email
     if(!orderDataContact.email.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i))
     {
         alert("adresse email invalide")
         return false
     }
 
+    // vérification que les inputs ne soit pas vide
     if(!orderDataContact.firstName ||
        !orderDataContact.lastName || 
        !orderDataContact.address ||
@@ -129,8 +136,11 @@ function sendOrderData(orderDataContact, orderDataPannier)
 {
     console.log("envoi de la commande\n\t- " + JSON.stringify(orderDataContact))
 
+    // validation du contact
     let validContact = checkContact(orderDataContact)
     let promise;
+
+    // vérification de l'objet contact et envoi de la requêtte de commande
     if(validContact)
     {
         
@@ -140,11 +150,13 @@ function sendOrderData(orderDataContact, orderDataPannier)
 
     }
     
+    // récupération des info de la réponse de la requête de commande
     promise.then(async (response) => 
     {
         try
         {
             console.log(response)
+            // récupération et enregistrement de la réponse dans le localStorage
             const content = await response.json()
             localStorage.resultOrder = JSON.stringify(content)
         }catch(err)
@@ -153,6 +165,7 @@ function sendOrderData(orderDataContact, orderDataPannier)
         }
     })
 
+    // ouverture de la page de resultat de commande
     window.open("../OrderResultPage.html")
     
 }

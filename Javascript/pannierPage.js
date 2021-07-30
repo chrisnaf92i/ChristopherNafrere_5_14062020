@@ -36,11 +36,13 @@ function displayPannier(_teddie)
     document.getElementById("pannier").appendChild(cloneElt)
 }
 
+// suppression d'un ourse du pannier
 function deleteArticle(_teddie)
 {
+    // récupération des template afficher
     let  btnDelete = document.getElementsByClassName("pannier__teddies__btnDel")
 
-
+    // suppression au clique de l'ourse et du template en question 
     for (let i = 0; i < _teddie.length; i++) {
         btnDelete[i].addEventListener("click", function()
         {
