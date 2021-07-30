@@ -105,13 +105,41 @@ function getInfo()
     return contact
 }
 
+function checkContact(orderDataContact)
+{
+    if(!orderDataContact.email.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i))
+    {
+        alert("adresse email invalide")
+        return false
+    }
+
+    if(!orderDataContact.firstName ||
+       !orderDataContact.lastName || 
+       !orderDataContact.address ||
+       !orderDataContact.email)
+    {
+        alert("tout les champs ne sont pas rempli")
+        return false
+    }
+
+    return true
+}
+
 function sendOrderData(orderDataContact, orderDataPannier)
 {
     console.log("envoi de la commande\n\t- " + JSON.stringify(orderDataContact))
-    let data = {contact:orderDataContact, products:orderDataPannier}
-    
-    const promise = fetch("http://localhost:3000/api/teddies/order", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(data) }) 
 
+    let validContact = checkContact(orderDataContact)
+    let promise;
+    if(validContact)
+    {
+        
+        let data = {contact:orderDataContact, products:orderDataPannier}
+        
+        promise = fetch("http://localhost:3000/api/teddies/order", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(data) }) 
+
+    }
+    
     promise.then(async (response) => 
     {
         try

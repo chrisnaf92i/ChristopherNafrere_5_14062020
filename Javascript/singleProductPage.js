@@ -64,6 +64,7 @@ function addToPannier(_teddy)
 {
     // récupération du bouton d'ajout
     let btnAdd = document.getElementById("btnAddPannier");
+    
     // création d'un faut pannier de la page
     let pannierTemporaire = []
     
